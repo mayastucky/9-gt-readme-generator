@@ -1,8 +1,12 @@
 // function to generate markdown for README
+const questions = require("./index");
+
 function generateMarkdown(data) {
-  return `# ${data.title}
-  
+  return `# Title
+
 `;
 }
+
+generateMarkdown();
 
 module.exports = generateMarkdown;

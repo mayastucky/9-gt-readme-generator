@@ -1,74 +1,78 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const information = require("./generateMarkdown");
-// array of questions for user
-const questions = [];
+const generateMarkdown = require("./generateMarkdown");
+// // array of questions for user
+// const questions = [];
 
-// function to write README file
-function writeToFile(fileName, data) {}
+// // function to write README file
+// function writeToFile(fileName, data) {}
 
-// function to initialize program
+// // function to initialize program
 function init() {
-  inquirer
-    .prompt([
-      {
-        type: "input",
-        message: "What is the title of your project?",
-        name: "title",
-      },
-      {
-        type: "input",
-        message: "Please enter a short description of your project.",
-        name: "description",
-      },
-      {
-        type: "input",
-        message: "What are the installation instructions for your project?",
-        name: "instructions",
-      },
-      {
-        type: "input",
-        message: "What is the usage information for your project?",
-        name: "usage",
-      },
-      {
-        type: "input",
-        message: "What are the contribution guidelines for your project?",
-        name: "contribution",
-      },
-      {
-        type: "input",
-        message: "What are the test instructions for your project?",
-        name: "test",
-      },
-      {
-        type: "list",
-        message: "What license is your project under?",
-        name: "license",
-        choices: ["MIT", "GPL", "Mozilla Public License", "Apache License"],
-      },
-      {
-        type: "input",
-        message: "What is your GitHub username?",
-        name: "username",
-      },
-      {
-        type: "input",
-        message: "What is your email address?",
-        name: "email",
-      },
-    ])
-    .then(function (data) {
-      fs.writeFile("SampleReadMe.md", "Generated ReadMe:", function (error) {
-        if (error) {
-          throw error;
-        }
-        console.log(
-          "Success! Please migrate to the new file with your generated Read Me"
-        );
-      });
+  const questions = [
+    {
+      type: "input",
+      message: "What is the title of your project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "Please enter a short description of your project.",
+      name: "description",
+    },
+    {
+      type: "input",
+      message: "What are the installation instructions for your project?",
+      name: "instructions",
+    },
+    {
+      type: "input",
+      message: "What is the usage information for your project?",
+      name: "usage",
+    },
+    {
+      type: "input",
+      message: "What are the contribution guidelines for your project?",
+      name: "contribution",
+    },
+    {
+      type: "input",
+      message: "What are the test instructions for your project?",
+      name: "test",
+    },
+    {
+      type: "list",
+      message: "What license is your project under?",
+      name: "license",
+      choices: ["MIT", "GPL", "Mozilla Public License", "Apache License"],
+    },
+    {
+      type: "input",
+      message: "What is your GitHub username?",
+      name: "username",
+    },
+    {
+      type: "input",
+      message: "What is your email address?",
+      name: "email",
+    },
+  ];
+  inquirer.prompt(questions).then(function (data) {
+    console.log(data);
+    fs.writeFile("SampleReadMe.md", generateMarkdown(data), function (error) {
+      if (error) {
+        throw error;
+      }
+      console.log(
+        "Success! Please migrate to the new file with your generated Read Me"
+      );
     });
+  });
 }
 
 // function call to initialize program
 init();
+
+module.exports = {
+  init: init,
+};
