@@ -22,7 +22,7 @@ function generateMarkdown(data) {
   ## Test
   ${data.test}
   ## License
-  ${data.license}
+  This project is licensed under the ${data.license} license. 
   ## Questions: 
   All questions can be directed to my 
   [GitHub](https://github.com/${data.username}) or my 
