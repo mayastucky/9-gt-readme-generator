@@ -42,7 +42,7 @@ const questions = [
     type: "list",
     message: "What license is your project under?",
     name: "license",
-    choices: ["MIT", "GPL", "MPL 2.0", "Apache License"],
+    choices: ["MIT", "GPL", "MPL"],
   },
   {
     type: "input",
@@ -55,7 +55,7 @@ const questions = [
     name: "email",
   },
 ];
-//function that asks the questions and then generates the page 
+//function that asks the questions and then generates the page
 function init() {
   inquirer.prompt(questions).then(function (data) {
     fs.writeFile("SampleReadMe.md", generateMarkdown(data), function (error) {
