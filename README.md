@@ -53,3 +53,5 @@ This was a solo project completed for homework for the Georgia Tech Full-Stack F
 ## URL
 
 [GitHub Repo](https://github.com/mayastucky/9-gt-readme-generator)
+
+[Video Walk-through](https://drive.google.com/file/d/1IPFI5CJz2PSEdZHKRlEYHHkOdhucjyNE/view?usp=sharing)
