@@ -1,13 +1,12 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./generateMarkdown");
-// // array of questions for user
-// const questions = [];
 
 // // function to write README file
 // function writeToFile(fileName, data) {}
 // // function to initialize program
 
+// // array of questions for user
 const questions = [
   {
     type: "input",
@@ -43,7 +42,7 @@ const questions = [
     type: "list",
     message: "What license is your project under?",
     name: "license",
-    choices: ["MIT", "GPL", "Mozilla Public License", "Apache License"],
+    choices: ["MIT", "GPL", "MPL 2.0", "Apache License"],
   },
   {
     type: "input",
@@ -56,6 +55,7 @@ const questions = [
     name: "email",
   },
 ];
+//function that asks the questions and then generates the page 
 function init() {
   inquirer.prompt(questions).then(function (data) {
     fs.writeFile("SampleReadMe.md", generateMarkdown(data), function (error) {

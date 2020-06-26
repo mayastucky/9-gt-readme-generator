@@ -2,7 +2,7 @@
 
 function generateMarkdown(data) {
   return ` # ${data.title}
-  [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
+  [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/${data.license})
   ## Description
   ${data.description}
   ## Table of contents 
@@ -29,5 +29,10 @@ function generateMarkdown(data) {
   [E-mail](${data.email})
   `;
 }
+
+// licenseBadge = (license) => {
+//   //paste the data.license value into the url
+//   const badge = ``;
+// };
 
 module.exports = generateMarkdown;
