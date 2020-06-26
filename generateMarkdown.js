@@ -6,12 +6,13 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
   ## Table of contents 
-  [Description](#Description)
-  [Instructions](#Instructions)
-  [Contributions](#Contributions)
-  [Test](#Test)
-  [License](#License)
-  [Questions](#Questions)
+  * [Description](#Description)
+  * [Instructions](#Instructions)
+  * [Usage](#Usage)
+  * [Contributions](#Contributions)
+  * [Test](#Test)
+  * [License](#License)
+  * [Questions](#Questions)
   ## Instructions
   ${data.instructions}
   ## Usage
@@ -23,9 +24,9 @@ function generateMarkdown(data) {
   ## License
   ${data.license}
   ## Questions: 
-  All questions can be directed to: 
-  [GitHub] (https://github.com/${data.username})
-  [Email] (${data.email})
+  All questions can be directed to my 
+  [GitHub](https://github.com/${data.username}) or my 
+  [E-mail](${data.email})
   `;
 }
 
