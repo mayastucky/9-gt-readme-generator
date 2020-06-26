@@ -4,6 +4,8 @@
 
 This application generates a README.md file based on user input, using Node.js along with the npm package inquirer and fs (file system).
 
+![](samplegif.gif)
+
 ## Table of Contents
 
 - [Description](#Description)
