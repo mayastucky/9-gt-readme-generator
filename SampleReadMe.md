@@ -1,7 +1,7 @@
- # sample
+ # Sample ReadMe
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
-  desc
+  This is a sample description for my READMe generator 
   ## Table of contents 
   * [Description](#Description)
   * [Instructions](#Instructions)
@@ -11,17 +11,17 @@
   * [License](#License)
   * [Questions](#Questions)
   ## Instructions
-  npm install
+  Clone repo and run `npm install`
   ## Usage
-  use
+  Sample usage information
   ## Contributions
-  none
+  Sample contribution information
   ## Test
-  NA
+  Sample test instructions
   ## License
   This project is licensed under the MIT license. 
   ## Questions: 
   All questions can be directed to my 
   [GitHub](https://github.com/mayastucky) or my 
-  [E-mail](maya@gmail.com)
+  [E-mail](mayaatstucky@gmail.com)
   
